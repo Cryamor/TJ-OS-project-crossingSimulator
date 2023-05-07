@@ -2,6 +2,8 @@
 
 ## 	十字路口交通控制
 
+本项目已上传`Github`：https://github.com/Cryamor/TJ-OS-projetct-crossingSimulator
+
 ### 项目介绍
 
 #### 项目开发
@@ -18,7 +20,7 @@
 
 ##### 运行方式
 
-1. 双击打包好的 **Crossing.exe** 运行，不需要单独安装PyQt5
+1. 双击打包好的 **Crossing.exe** 运行，不需要单独安装PyQt5（**CrossingNoConsole.exe**是不含控制台的版本，控制台中会显示一些信号信息和信号量矩阵的变化），打开时有可能会卡顿一下，不要着急。
 
 2. 安装PyQt5:
 
@@ -183,3 +185,9 @@ def move(self):
     self.cc.end_signal.emit(self.car_name)
 ```
 
+### 参考资料
+
+- [PyQt5官方文档](https://doc.qt.io/qtforpython-5/api.html)：https://doc.qt.io/qtforpython-5/api.html
+
+- [PyQt5中文教程](https://github.com/maicss/PyQt-Chinese-tutorial)：https://github.com/maicss/PyQt-Chinese-tutorial
+- [<Java图像学习笔记>十字路口交通模拟](https://www.cnblogs.com/guguli/p/4410019.html)：https://www.cnblogs.com/guguli/p/4410019.html

@@ -34,7 +34,7 @@ class MainWindow(QMainWindow):
         self.light_thread.second_signal.connect(self.lcd.display)
         self.lcd.setSegmentStyle(QLCDNumber.Flat)
         self.lcd.show()
-               
+        
         # buttons to set cars
         self.set_btns()
         
@@ -63,6 +63,17 @@ class MainWindow(QMainWindow):
         self.red_label.resize(40, 83) # orignial 65*136
         self.red_label.setScaledContents(True)
         self.red_label.setObjectName("redlight")
+        
+        text = QLabel(self)
+        text.setGeometry(120, 63, 40, 12)
+        font = QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        text.setFont(font)
+        text.setText(" N&S")
+        self.green_label.setToolTip("This is the Traffic Light for direction <b>N</b>orth and <b>S</b>outh")
+        self.red_label.setToolTip("This is the Traffic Light for direction <b>N</b>orth and <b>S</b>outh")
+               
 
     def switch_light(self, signal):
         if signal == True:
